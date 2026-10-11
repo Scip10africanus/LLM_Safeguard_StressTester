@@ -1,0 +1,9 @@
+# Fill in endpoints/models; keys are read from the named env vars.
+target:   {model: TARGET_MODEL,   base_url: https://openrouter.ai/api/v1, api_key_env: OPENROUTER_API_KEY, max_tokens: 512}
+attacker: {model: ATTACKER_MODEL, base_url: https://openrouter.ai/api/v1, api_key_env: OPENROUTER_API_KEY, temperature: 1.0, max_tokens: 1024}
+judge:    {model: JUDGE_MODEL,    base_url: https://openrouter.ai/api/v1, api_key_env: OPENROUTER_API_KEY, max_tokens: 64}
+split: eval
+limit: 5
+budget: 5
+workers: 2
+out: runs/smoke.jsonl
